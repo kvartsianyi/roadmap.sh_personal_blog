@@ -1,0 +1,17 @@
+extends layout.pug
+
+block links
+	link(rel="stylesheet", href="/article-modify.css")
+
+block content
+	- const _article = article || {};
+	- _article.publishedAt = _article?.publishedAt?.split(' ')[0];
+
+	h1(class="title")= title
+	form(class="basic-form" action= action, method="post") 
+		input(class="input-field" type="text" name="title" value= _article.title || '' placeholder="Article Title" minlength="3" maxlength="255" required)
+		input(class="input-field" type="date" name="publishedAt" value= _article.publishedAt || '' placeholder="Publishing Date" required)
+		<textarea class="input-field" name="content" placeholder="Content" rows="10" minlength="3" required>#{_article.content}</textarea>
+		button(type="submit")= submitBtnTitle
+
+		

@@ -1,0 +1,7 @@
+mixin formatDate(date)
+  - if (date)
+    - const datePart = date.split(' ')[0]
+    - const formattedDate = datePart.split('-').reverse().join('-')
+    | #{formattedDate}
+  - else
+    | ''

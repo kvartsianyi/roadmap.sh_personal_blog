@@ -1,0 +1,13 @@
+extends layout.pug
+include mixins.pug
+
+block links
+	link(rel="stylesheet", href="/article-view.css")
+
+block content
+	h1(class="title") #{article.title}
+
+	p(class="date")
+		+formatDate(article.publishedAt)
+
+	p(class="content") #{article.content}

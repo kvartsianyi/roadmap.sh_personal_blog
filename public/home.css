@@ -1,0 +1,47 @@
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+header div a {
+	margin-left: 10px;
+	color: black;
+}
+
+.transparent-btn {
+	display: inline-block;
+	background-color: transparent;
+	border: none;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+}	
+
+.transparent-btn:hover {
+	text-decoration: underline;
+}
+
+.articles {
+	margin-top: 25px;
+}
+
+.articles div {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.title {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.article {
+	width: 100%;
+}
+
+.action-btns {
+	margin-left: 25px;
+	width: 150px;
+}

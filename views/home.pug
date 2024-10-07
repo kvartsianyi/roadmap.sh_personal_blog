@@ -1,0 +1,28 @@
+extends layout.pug
+include mixins.pug
+
+block links
+	link(rel="stylesheet", href="/home.css")
+
+block content
+	header
+		h1 Personal Blog
+		div
+			unless admin
+				a(class="transparent-btn" href="/admin") Login
+			if admin
+				a(class="transparent-btn" href="/articles/new") + Add
+				a(class="transparent-btn" href="/logout") Logout
+
+	div(class="articles")
+		each article in articles
+			div
+				div(class="article")
+					a(class="title" href=`/articles/${article.id}`)= article.title
+					span(class="date")
+						+formatDate(article.publishedAt)
+				
+				if admin
+					div(class="action-btns")
+						a(class="transparent-btn action" href=`/articles/${article.id}/edit`) Edit
+						a(class="transparent-btn action" href=`/articles/${article.id}/delete`) Delete

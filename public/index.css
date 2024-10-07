@@ -1,0 +1,82 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+body {
+	font-family: Georgia, Courier, monospace;
+}
+
+.d-inline-block {
+	display: inline-block;
+}
+
+.container-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.container {
+	width: 800px;
+	margin: 15px 0;
+	padding: 25px;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+.basic-form {
+	display: flex;
+	flex-direction: column;
+	margin-top: 25px;
+}
+
+.input-field {
+	border: 2px solid black;
+	border-radius: 5px;
+	margin: 5px 0;
+	padding: 10px;
+	font-size: 16px;
+}
+
+input.input-field {
+	height: 50px;
+}
+
+.input-field::placeholder {
+	font-weight: bold;
+}
+
+.outline-form-btn {
+	margin-top: 15px;
+	padding: 15px;
+	background-color: transparent;
+	border: 2px solid black;
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	width: fit-content;
+}
+
+.date, .action {
+	font-size: 18px;
+	color: #4e4e4e;
+	font-weight: bold;
+}
+
+.error-message {
+	color: red;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
