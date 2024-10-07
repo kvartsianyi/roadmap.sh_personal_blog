@@ -19,6 +19,8 @@ cd ./personal_blog
 
 **3. Run the project**
 
+**Important!** Create `.env` file. Use `.env.example` as hint.
+
 Run the folowing commands in project folder:
 1. Install packages
 ```
